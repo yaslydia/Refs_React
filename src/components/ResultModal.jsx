@@ -1,4 +1,4 @@
-import { forwardRef, useInperativeHandle, useRef } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 
 const ResultModal = forwardRef(function ResultModal(
   { result, targetTime },
@@ -6,7 +6,7 @@ const ResultModal = forwardRef(function ResultModal(
 ) {
   const dialog = useRef();
 
-  useInperativeHandle(ref, () => {
+  useImperativeHandle(ref, () => {
     return {
       open() {
         dialog.current.showModal();
